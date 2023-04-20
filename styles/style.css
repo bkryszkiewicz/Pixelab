@@ -5,17 +5,17 @@
 body {
   margin-left: auto;
   margin-right: auto;
-  padding: 20px 100px 20px 100px;
   font-family: "Ageo Personal Use", sans-serif;
 }
 
 /* BUTTONS */
 .orange-button {
-  color: white;
+  color: white !important;
   background: #ff6600;
   border-radius: 10px;
   border: 0px;
   text-align: center;
+  line-height: 2rem;
   padding: 0.8333333333rem 1.8888888889rem;
   text-decoration: none;
   cursor: pointer;
@@ -52,7 +52,7 @@ body {
 /* NAVBAR */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 30px 0px;
 }
@@ -68,6 +68,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 40px;
+  align-items: center;
 }
 .nav-links li {
   font-size: 0;
@@ -86,6 +87,7 @@ header {
 /* SECTION HEADERS */
 .section {
   margin-bottom: 100px;
+  width: 100%;
 }
 .section__name {
   text-transform: uppercase;
@@ -96,7 +98,7 @@ header {
 }
 .section__title {
   font-size: 2.8888888889rem;
-  line-height: 28px;
+  line-height: 3rem;
   text-align: center;
   margin-bottom: 108px;
   font-weight: 700;
@@ -150,7 +152,7 @@ header {
 }
 .services__title {
   font-size: 1.8888888889rem;
-  line-height: 28px;
+  line-height: 3rem;
   font-weight: 700;
 }
 .services__description {
@@ -167,8 +169,9 @@ header {
 }
 
 /* SERVICES P2 */
-#servicesp2 {
+.servicesp2-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   font-family: "DM Sans";
 }
@@ -177,8 +180,8 @@ header {
   position: relative;
 }
 .servicesp2__video-mini {
-  width: 687px;
-  height: 386px;
+  max-width: 687px;
+  max-height: 386px;
 }
 
 .navy-header {
@@ -186,7 +189,7 @@ header {
   font-weight: 500;
   font-size: 1.2222222222rem;
   line-height: 32px;
-  max-width: 200px;
+  max-width: 100%;
   margin-bottom: 0px;
 }
 
@@ -212,7 +215,7 @@ header {
   display: flex;
   align-content: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -312,7 +315,7 @@ footer {
   line-height: 26px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 40px;
   padding-bottom: 31px;
   border-bottom: 2px solid #ebeaed;
@@ -337,9 +340,70 @@ footer {
   cursor: pointer;
 }
 .footer__gray-p {
+  text-align: center;
   font-size: 0.8888888889rem;
   line-height: 26px;
   color: rgba(21, 20, 57, 0.4);
 }
 
+@media (max-width: 1235px) {
+  .servicesp2-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "DM Sans";
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .servicesp2-section .servicesp2 {
+    text-align: center;
+  }
+  .servicesp2-section .servicesp2__pic {
+    position: relative;
+  }
+  .servicesp2-section .servicesp2__video-mini {
+    width: 100%;
+    max-height: 386px;
+  }
+}
+@media (max-width: 500px) {
+  .servicesp2-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "DM Sans";
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .servicesp2-section .servicesp2__pic {
+    position: relative;
+  }
+  .testimonial {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .testimonial__user {
+    display: flex;
+    width: 100%;
+  }
+  .testimonial__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .services__element {
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 28px;
+    padding: 10px 20px 20px 20px;
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

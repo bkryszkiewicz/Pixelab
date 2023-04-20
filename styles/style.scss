@@ -18,17 +18,17 @@ $secondary-font: "DM Sans";
 body {
   margin-left: auto;
   margin-right: auto;
-  padding: 20px 100px 20px 100px;
   font-family: $primary-font;
 }
 
 /* BUTTONS */
 .orange-button {
-  color: $white-color;
+  color: $white-color!important;
   background: $orange-color;
   border-radius: 10px;
   border: 0px;
   text-align: center;
+  line-height: 2rem;
   padding: convertPxToRem(15) convertPxToRem(34);
   text-decoration: none;
   cursor: pointer;
@@ -66,7 +66,7 @@ body {
 /* NAVBAR */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 30px 0px;
 }
@@ -82,6 +82,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 40px;
+  align-items: center;
 
   & li {
     font-size: 0;
@@ -104,6 +105,7 @@ header {
 
 .section {
   margin-bottom: 100px;
+  width: 100%;
 
   &__name {
     text-transform: uppercase;
@@ -115,7 +117,7 @@ header {
 
   &__title {
     font-size: convertPxToRem(52);
-    line-height: 28px;
+    line-height: 3rem;
     text-align: center;
     margin-bottom: 108px;
     font-weight: 700;
@@ -177,7 +179,7 @@ header {
 
   &__title {
     font-size: convertPxToRem(34);
-    line-height: 28px;
+    line-height: 3rem;
     font-weight: 700;
   }
 
@@ -199,20 +201,22 @@ header {
 }
 
 /* SERVICES P2 */
-#servicesp2 {
+.servicesp2-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   font-family: $secondary-font;
 }
 
 .servicesp2 {
+  
   &__pic {
     position: relative;
   }
 
   &__video-mini {
-    width: 687px;
-    height: 386px;
+    max-width: 687px;
+    max-height: 386px;
   }
 }
 
@@ -221,7 +225,8 @@ header {
   font-weight: 500;
   font-size: convertPxToRem(22);
   line-height: 32px;
-  max-width: 200px;
+  max-width: 100%;
+
   margin-bottom: 0px;
 }
 
@@ -247,7 +252,7 @@ header {
   display: flex;
   align-content: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
 
@@ -263,6 +268,7 @@ header {
   }
 
   &__text {
+
     font-weight: 500;
     font-size: convertPxToRem(18);
     line-height: 28px;
@@ -361,7 +367,7 @@ footer {
   line-height: 26px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 40px;
   padding-bottom: 31px;
   border-bottom: 2px solid #ebeaed;
@@ -390,6 +396,7 @@ footer {
   }
 
   &__gray-p {
+    text-align: center;
     font-size:  convertPxToRem(16);
     line-height: 26px;
     color: rgba(21, 20, 57, 0.4);
@@ -397,4 +404,79 @@ footer {
 
 }
 
+@media (max-width:1235px) {
+  .servicesp2-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "DM Sans";
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap:50px;
+
+  .servicesp2 {
+  text-align: center;
+
+    &__pic {
+      position: relative;
+    }
+  
+    &__video-mini {
+      width:100%;
+      max-height: 386px;
+    }
+  }
+}
+}
+@media (max-width:500px) {
+  .servicesp2-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "DM Sans";
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap:50px;
+
+  .servicesp2 {
+  
+    &__pic {
+      position: relative;
+    }
+  
+ 
+  }
+}
+
+.testimonial {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__user {
+    display: flex;
+    width: 100%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.services {
+
+  &__element {
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 28px;
+    padding: 10px 20px 20px 20px;
+    width: 100%;
+  }
+}
+}
 /*# sourceMappingURL=style.css.map */
