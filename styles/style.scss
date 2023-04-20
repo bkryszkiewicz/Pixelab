@@ -417,10 +417,6 @@ footer {
 
   .servicesp2 {
   text-align: center;
-
-    &__pic {
-      position: relative;
-    }
   
     &__video-mini {
       width:100%;
@@ -429,26 +425,7 @@ footer {
   }
 }
 }
-@media (max-width:500px) {
-  .servicesp2-section{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-family: "DM Sans";
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  gap:50px;
-
-  .servicesp2 {
-  
-    &__pic {
-      position: relative;
-    }
-  
- 
-  }
-}
+@media (max-width:950px) {
 
 .testimonial {
   display: flex;
@@ -457,11 +434,6 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-
-  &__user {
-    display: flex;
-    width: 100%;
-  }
 
   &__info {
     display: flex;
@@ -478,5 +450,18 @@ footer {
     width: 100%;
   }
 }
+.footer {
+  flex-direction: column;
+  text-align: center;
+}
+@media (max-width:950px) {
+
+  .footer__links {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+}
+
 }
 /*# sourceMappingURL=style.css.map */

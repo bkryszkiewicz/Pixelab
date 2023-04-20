@@ -360,28 +360,12 @@ footer {
   .servicesp2-section .servicesp2 {
     text-align: center;
   }
-  .servicesp2-section .servicesp2__pic {
-    position: relative;
-  }
   .servicesp2-section .servicesp2__video-mini {
     width: 100%;
     max-height: 386px;
   }
 }
-@media (max-width: 500px) {
-  .servicesp2-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-family: "DM Sans";
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    gap: 50px;
-  }
-  .servicesp2-section .servicesp2__pic {
-    position: relative;
-  }
+@media (max-width: 950px) {
   .testimonial {
     display: flex;
     align-content: center;
@@ -389,10 +373,6 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-  }
-  .testimonial__user {
-    display: flex;
-    width: 100%;
   }
   .testimonial__info {
     display: flex;
@@ -404,6 +384,17 @@ footer {
     border-radius: 28px;
     padding: 10px 20px 20px 20px;
     width: 100%;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 950px) and (max-width: 950px) {
+  .footer__links {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
